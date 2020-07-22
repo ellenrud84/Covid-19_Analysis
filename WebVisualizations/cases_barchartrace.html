@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <!-- define header -->
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Covid-19 in the U.S.</title>
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- define body -->
+  <body>
+ 
+    <div class ="container">
+      <div class = "row"></div>
+        <!-- start of nav bar -->
+        <div class ="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+          <!-- container for nav bar content -->
+          <div class= container>
+            <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+            <!-- button to show or hide nav items?? -->
+            <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+              <span class= "navbar-toggler-icon"></span>
+            </button>
+            <div class= "collapse navbar-collapse" id="navbarResponsive">
+              <ul class= "navbar-nav mr-auto">
+                <!-- drop down item in navbar -->
+                <li class="nav-item dropdown show">
+                  <!-- learn how this works? Javascript to toggle? -->
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" 
+                  aria-expanded="false">
+                    Plots
+                    <span class="caret"></span>
+                    <!-- ::after -->
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../viz1/">Timelapse of Cases</a>
+                    <a class="dropdown-item" href="../viz2/">Timelapse of Deaths</a>
+                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
+                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
+                    <a class="dropdown-item" href="../viz4/">Cases Mar 2020</a>
+                    <a class="dropdown-item" href="../viz5/">Cases Apr 2020</a>
+                    <a class="dropdown-item" href="../viz6/">Cases May 2020</a>
+                    <a class="dropdown-item" href="../viz7/">Cases Jun 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Jul 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Per Capita Jul 2020</a>
+                    <a class="dropdown-item" href="../viz9/">Deaths Per Capita Jul 2020</a> 
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Comparisons/">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Data/">Data</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--finished with navbar onto page header  -->
+      <div class = "row">
+        <div class= "container">
+          <div class= "bs-docs-section">
+              <div class = "row">
+                  <div class= "col-lg-12">           
+                        <div class="bs-component"> 
+                            <h3>Timelapse Video of Number of Cases in each State</h3>
+                        </div>
+                    </div>
+                </div>
+              <div class= "row">
+                    <div class= "col-lg-12">
+                        <div class= "bs-component">
+                             <p> An animation of the Number of confirmed cases of COVID-19 from January to Mid July 2020.</p> 
+                        </div>
+                    </div>
+              </div>
+              <div class ="row">
+                    <div class= "col-lg-12">
+                        <video width="1000" height="600" controls=”controls”>
+                            <source src="visualizations\Timelapse_Cases_by_State.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <!-- define header -->
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Covid-19 in the U.S.</title>
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- define body -->
+  <body>
+ 
+    <div class ="container">
+      <div class = "row"></div>
+        <!-- start of nav bar -->
+        <div class ="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+          <!-- container for nav bar content -->
+          <div class= container>
+            <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+            <!-- button to show or hide nav items?? -->
+            <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+              <span class= "navbar-toggler-icon"></span>
+            </button>
+            <div class= "collapse navbar-collapse" id="navbarResponsive">
+              <ul class= "navbar-nav mr-auto">
+                <!-- drop down item in navbar -->
+                <li class="nav-item dropdown show">
+                  <!-- learn how this works? Javascript to toggle? -->
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" 
+                  aria-expanded="false">
+                    Plots
+                    <span class="caret"></span>
+                    <!-- ::after -->
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
+                    <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
+                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
+                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
+                    <a class="dropdown-item" href="../viz4/">Cases Mar 2020</a>
+                    <a class="dropdown-item" href="../viz5/">Cases Apr 2020</a>
+                    <a class="dropdown-item" href="../viz6/">Cases May 2020</a>
+                    <a class="dropdown-item" href="../viz7/">Cases Jun 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Jul 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Per Capita Jul 2020</a>
+                    <a class="dropdown-item" href="../viz9/">Deaths Per Capita Jul 2020</a> 
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Comparisons/">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Data/">Data</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--finished with navbar onto page header  -->
+      <div class = "row">
+        <div class= "container">
+          <div class="page-header" id="banner">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+          <div class= "bs-docs-section">
+              <div class = "row">
+                <div class= "col-lg-12">           
+                  <div class="bs-component"> 
+                    <h3>Per Capita Analysis of Cases at County Level</h3>
+                  </div>
+                </div>
+              <br>
+              <div class= "row">
+                <div class= "col-lg-12">
+                  <div class= "bs-component">
+                    <p>
+                    The percent of each United States county's population with confirmed cases of COVID-19 at the end of each month from January to July 18, 2020.
+                    </p> 
+                  </div>
+                </div>
+              </div>
+              <div class ="row">
+                <div class= "col-lg-6">
+                  <p>
+                      <a href="assets\01_2020_percap_cases.png" >
+                        <img src= "assets\01_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19 on Jan 31, 2020">
+                      </a>
+                  </p>
+                </div>
+                <div class= "col-lg-6">
+                  <p>
+                    <a href="assets\02_2020_percap_cases.png" >
+                      <img src= "assets\02_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19, on Feb 29, 2020">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class = "row">
+                <div class= "col-lg-6">
+                  <p>
+                    <a href="assets\03_2020_percap_cases.png" >
+                      <img src= "assets\03_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19 on Mar 31, 2020">
+                    </a>
+                  </p>
+                </div>
+                <div class= "col-lg-6">
+                  <p>
+                      <a href="assets\04_2020_percap_cases.png" >
+                        <img src= "assets\04_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19 on Apr 30, 2020">
+                      </a>
+                  </p>
+                </div>
+              </div>
+              <div class = "row">
+                <div class= "col-lg-6">
+                  <p>
+                    <a href="assets\05_2020_percap_cases.png" >
+                      <img src= "assets\05_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19 on Jun 30, 2020">
+                    </a>
+                  </p>
+                </div>
+                <div class= "col-lg-6">
+                  <p>
+                      <a href="assets\06_2020_percap_cases.png" >
+                        <img src= "assets\06_2020_percap_cases.png"style="height: 300px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19 on Jul 18, 2020">
+                      </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>
