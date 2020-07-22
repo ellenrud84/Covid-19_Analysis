@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <!-- define header -->
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Covid-19 in the U.S.</title>
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- define body -->
+  <body>
+    <!-- Side navigation -->
+    <div class="sidenav">
+      <div class="bs-component">
+        <div class="card mb-3">
+          <h3 class="card-header">Cases</h3>
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted">State Level</h6>
+          </div>
+          <a href="#" class="../viz1/">
+              <img src= "assets\Cases_State_July18.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
+          </a> 
+        </div>
+        <div class="card mb-3">
+          <h3 class="card-header">Deaths</h3>
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted">State Level</h6>
+          </div>
+          <a href="#" class="../viz2/">
+              <img src= "assets\Deaths_July2018.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
+          </a> 
+        </div>
+        <div class="card mb-3">
+          <h3 class="card-header">Cases</h3>
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted">County Level</h6>
+          </div>
+          <a href="#" class="../viz1/">
+            <img src= "assets\cty_cases_jul2020.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
+          </a> 
+        </div>
+        <div class="card mb-3">
+          <h3 class="card-header">Timelapse</h3>
+          <div class="card-body">
+            <h6 class="card-subtitle text-muted">Animation of cases over time</h6>
+          </div>
+          <a href="#" class="../viz1/">
+            <img src= "assets\cty_cases_jul2020.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
+          </a> 
+          <div class="card-body">
+            <p class="card-text">State by state cases over time depicted as a bar chart race.</p>
+          </div>
+          
+          <div class="card-footer text-muted">
+            Updated:07/20/2020
+          </div>
+        </div>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class ="container">
+      <div class = "row"></div>
+        <!-- start of nav bar -->
+        <div class ="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+          <!-- container for nav bar content -->
+          <div class= container>
+            <a href="../" class="navbar-brand">Covid-19 in the U.S.</a>
+            <!-- button to show or hide nav items?? -->
+            <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+              <span class= "navbar-toggler-icon"></span>
+            </button>
+            <div class= "collapse navbar-collapse" id="navbarResponsive">
+              <ul class= "navbar-nav mr-auto">
+                <!-- drop down item in navbar -->
+                <li class="nav-item dropdown show">
+                  <!-- learn how this works? Javascript to toggle? -->
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" 
+                  aria-expanded="false">
+                    Plots
+                    <span class="caret"></span>
+                    <!-- ::after -->
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="../home/">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../viz1/">Timelapse of Cases</a>
+                    <a class="dropdown-item" href="../viz2/">Timelapse of Deaths</a>
+                    <a class="dropdown-item" href="../viz3">Cases Feb 2020</a>
+                    <a class="dropdown-item" href="../viz4/">Cases Mar 2020</a>
+                    <a class="dropdown-item" href="../viz5/">Cases Apr 2020</a>
+                    <a class="dropdown-item" href="../viz6/">Cases May 2020</a>
+                    <a class="dropdown-item" href="../viz7/">Cases Jun 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Jul 2020</a>
+                    <a class="dropdown-item" href="../viz8/">Cases Per Capita Jul 2020</a>
+                    <a class="dropdown-item" href="../viz9/">Deaths Per Capita Jul 2020</a> 
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Comparisons/">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Data/">Data</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--finished with navbar onto page header  -->
+      <div class = "row">
+        <div class= "container">
+          <div class="page-header" id="banner">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+          <div class= "bs-docs-section">
+              <div class = "row">
+                <div class= "col-lg-9">           
+                  <div class="bs-component"> 
+                    <h3>Analysis of Covid-19 Spread in the United States</h3>
+                  </div>
+                </div>
+              <br>
+              <div class= "row">
+                <div class= "col-lg-9">
+                  <div class= "bs-component">
+                    <p> Covid-19 data from Johns Hopkins University was used to create several visualizations
+                      of the geographic distribution of cases and deaths over time.
+                    </p>
+                    <p> First, the number of cases and deaths was studied by state. Animations called bar chart races were created to show the 
+                      relative number of cases and deaths by state over time.  Next, population data was added to the dataset
+                      and the per-capita number of cases and deaths was calculated for each location and date.  Finally, the 
+                      data was geographically mapped by county with a colorscheme representing the per capita number or cases
+                      and per capita number of deaths for each county.  
+                    </p> 
+                    <p>
+                      Per Capita data captures the progression of viral
+                      contagion within a given community and can better allow communities to prepare mitigation effort
+                    </p> 
+                  </div>
+                </div>
+              </div>
+              <div class ="row">
+                <div class= "col-lg-12">
+                  <a href="#" class="../viz1/">
+                    <img src= "assets\07_18_2020_percap_cases.png"style="height: 500px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>
