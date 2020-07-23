@@ -13,14 +13,26 @@
   </head>
   <!-- define body -->
   <body>
- 
-    <div class ="container">
-      <div class = "row"></div>
-        <!-- start of nav bar -->
-        <li class="nav-item dropdown"> 
+    <div id ="content">
+      <!-- start of nav bar -->
+      <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
+        <!-- container for nav bar content -->
+        <div class= "container">
+          <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+          <!-- button to show or hide nav items?? -->
+          <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class= "navbar-toggler-icon"></span>
+          </button>
+          <!-- $('.dropdown-toggle').dropdown() -->
+          <div class= "collapse navbar-collapse" id="navbarResponsive">
+            <ul class= "navbar-nav mr-auto">
+              <!-- Plots drop down item in navbar -->
+              <li class="nav-item dropdown"> 
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   Plots
-                  <span class="caret"></span>
+                  <span class="rt_caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
@@ -45,9 +57,9 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Comparisons
-                  <span class="caret"></span>
+                  Comparisons 
                 </a>
+                <span class="rt_caret"></span>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
                   <div class="dropdown-divider"></div>
@@ -61,15 +73,27 @@
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
+    </div>
       
+    <div class= "container"> 
+
       <!--finished with navbar onto page header  -->
-      <p> Header for Table 1</p>
-      <table class = "">
-          <!--  pull in html tables from jupyter notebook  -->
-      </table>
+      <h2> State Data</h2>
+      <a href="us_counties.html"> Table of State and County Number of Cases and Deaths</a>
       <!-- add spacer element -->
-      <p> Header for Table 2</p>
-          <table class = "">
-          <!--  pull in html tables from jupyter notebook  -->
-      </table>
+     
+      
+      <h2> Cases Per Capita Data</h2>
+      <a href="cases_per_capita.html"> Table of County Based Per Capita Cases Data</a>
+      <!-- add spacer element -->
+
+      <h2> Header for Table 2</h2>
+      <a href= "death_per_capita.html"> Table of County Based Per Capita Deaths Data</a>
+    
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

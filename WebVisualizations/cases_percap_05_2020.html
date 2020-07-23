@@ -14,13 +14,26 @@
   <!-- define body -->
   <body>
  
-    <div class ="container">
-      <div class = "row"></div>
-        <!-- start of nav bar -->
-        <li class="nav-item dropdown"> 
+    <div id ="content">
+      <!-- start of nav bar -->
+      <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
+        <!-- container for nav bar content -->
+        <div class= "container">
+          <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+          <!-- button to show or hide nav items?? -->
+          <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class= "navbar-toggler-icon"></span>
+          </button>
+          <!-- $('.dropdown-toggle').dropdown() -->
+          <div class= "collapse navbar-collapse" id="navbarResponsive">
+            <ul class= "navbar-nav mr-auto">
+              <!-- Plots drop down item in navbar -->
+              <li class="nav-item dropdown"> 
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   Plots
-                  <span class="caret"></span>
+                  <span class="rt_caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
@@ -45,9 +58,9 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Comparisons
-                  <span class="caret"></span>
+                  Comparisons 
                 </a>
+                <span class="rt_caret"></span>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
                   <div class="dropdown-divider"></div>
@@ -61,37 +74,35 @@
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
+    </div>
+      
       
       <!--finished with navbar onto page header  -->
-      <div class = "row">
-        <div class= "container">
-          <div class= "bs-docs-section">
-              <div class = "row">
-                  <div class= "col-lg-12">           
-                        <div class="bs-component"> 
-                            <h3>Percent of County Population with Confirmed Cases -May 31, 2020</h3>
-                        </div>
-                    </div>
-                </div>
-              <div class= "row">
-                    <div class= "col-lg-12">
-                        <div class= "bs-component">
-                             <p> The number of confirmed cases in every US county was dividied by that county's population and then multiplied by 100 to get the percentage of people infected.</p> 
-                        </div>
-                    </div>
+
+    <div class= "container">
+      
+          <div class = "row">
+              <div class= "col-lg-12">           
+                <h2>Percent of County Population with Confirmed Cases -May 31, 2020</h2>
               </div>
-              <div class ="row">
-                    <div class= "col-lg-12">  
-                        <img src= "assets\05_2020_percap_cases.png"style="height: 500px; width: 100%; display: block;" 
-                        alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19">
-                    </div>
-                </div>
-            </div>
           </div>
-        </div>
-      </div> 
-    </div>
+          
+          <div class= "row">
+              <div class= "col-lg-12">
+                <p> The number of confirmed cases in every US county was dividied by that county's population and then multiplied by 100 to get the percentage of people infected.</p> 
+              </div>
+          </div>
+
+          <div class ="row">
+              <div class= "col-lg-12">  
+                  <img src= "assets\05_2020_percap_cases.png"style="height: 500px; width: 100%; display: block;" 
+                  alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19">
+              </div>
+          </div>
+            
+    </div> 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

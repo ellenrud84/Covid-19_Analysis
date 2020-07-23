@@ -14,13 +14,26 @@
   <!-- define body -->
   <body>
  
-    <div class ="container">
-      <div class = "row"></div>
-        <!-- start of nav bar -->
-        <li class="nav-item dropdown"> 
+    <div id ="content">
+      <!-- start of nav bar -->
+      <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
+        <!-- container for nav bar content -->
+        <div class= "container">
+          <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+          <!-- button to show or hide nav items?? -->
+          <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class= "navbar-toggler-icon"></span>
+          </button>
+          <!-- $('.dropdown-toggle').dropdown() -->
+          <div class= "collapse navbar-collapse" id="navbarResponsive">
+            <ul class= "navbar-nav mr-auto">
+              <!-- Plots drop down item in navbar -->
+              <li class="nav-item dropdown"> 
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   Plots
-                  <span class="caret"></span>
+                  <span class="rt_caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
@@ -45,9 +58,9 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Comparisons
-                  <span class="caret"></span>
+                  Comparisons 
                 </a>
+                <span class="rt_caret"></span>
                 <div class="dropdown-menu" aria-labelledby="themes">
                   <a class="dropdown-item" href="index.html">Home</a>
                   <div class="dropdown-divider"></div>
@@ -61,36 +74,28 @@
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
+    </div>
+      
       
       <!--finished with navbar onto page header  -->
-      <div class = "row">
-        <div class= "container">
-          <div class="page-header" id="banner">
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-          <div class= "bs-docs-section">
+
+    <div class= "container">
+
               <div class = "row">
                 <div class= "col-lg-12">           
-                  <div class="bs-component"> 
-                    <h3>Per Capita Analysis of Cases at County Level</h3>
-                  </div>
+                    <h2>Per Capita Analysis of Cases at County Level</h2>
                 </div>
-              <br>
+              </div>  
+
               <div class= "row">
                 <div class= "col-lg-12">
-                  <div class= "bs-component">
                     <p>
                     The percent of each United States county's population with confirmed cases of COVID-19 at the end of each month from January to July 18, 2020.
                     </p> 
-                  </div>
                 </div>
               </div>
+
               <div class ="row">
                 <div class= "col-lg-6">
                   <p>
@@ -99,6 +104,7 @@
                       </a>
                   </p>
                 </div>
+
                 <div class= "col-lg-6">
                   <p>
                     <a href="assets\02_2020_percap_cases.png" >
@@ -107,6 +113,7 @@
                   </p>
                 </div>
               </div>
+
               <div class = "row">
                 <div class= "col-lg-6">
                   <p>
@@ -115,6 +122,7 @@
                     </a>
                   </p>
                 </div>
+
                 <div class= "col-lg-6">
                   <p>
                       <a href="assets\04_2020_percap_cases.png" >
@@ -123,6 +131,7 @@
                   </p>
                 </div>
               </div>
+
               <div class = "row">
                 <div class= "col-lg-6">
                   <p>
@@ -131,6 +140,7 @@
                     </a>
                   </p>
                 </div>
+
                 <div class= "col-lg-6">
                   <p>
                       <a href="assets\06_2020_percap_cases.png" >
@@ -139,10 +149,7 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div> 
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
