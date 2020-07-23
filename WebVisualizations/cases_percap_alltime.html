@@ -4,6 +4,7 @@
   <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Covid-19 in the U.S.</title>
 
     <!-- Bring in our bootstrap stylesheet -->
@@ -16,54 +17,52 @@
     <div class ="container">
       <div class = "row"></div>
         <!-- start of nav bar -->
-        <div class ="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-          <!-- container for nav bar content -->
-          <div class= container>
-            <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
-            <!-- button to show or hide nav items?? -->
-            <button class= "navbar-toggler" type="button" data-toggle="collapse" 
-            data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-              <span class= "navbar-toggler-icon"></span>
-            </button>
-            <div class= "collapse navbar-collapse" id="navbarResponsive">
-              <ul class= "navbar-nav mr-auto">
-                <!-- drop down item in navbar -->
-                <li class="nav-item dropdown show">
-                  <!-- learn how this works? Javascript to toggle? -->
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" 
-                  aria-expanded="false">
-                    Plots
-                    <span class="caret"></span>
-                    <!-- ::after -->
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="themes">
-                    <a class="dropdown-item" href="index.html">Home</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
-                    <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
-                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
-                    <a class="dropdown-item" href="../viz3"> Cases Feb 2020</a>
-                    <a class="dropdown-item" href="../viz4/">Cases Mar 2020</a>
-                    <a class="dropdown-item" href="../viz5/">Cases Apr 2020</a>
-                    <a class="dropdown-item" href="../viz6/">Cases May 2020</a>
-                    <a class="dropdown-item" href="../viz7/">Cases Jun 2020</a>
-                    <a class="dropdown-item" href="../viz8/">Cases Jul 2020</a>
-                    <a class="dropdown-item" href="../viz8/">Cases Per Capita Jul 2020</a>
-                    <a class="dropdown-item" href="../viz9/">Deaths Per Capita Jul 2020</a> 
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../Comparisons/">Comparisons</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../Data/">Data</a>
-                </li>
-              </ul>
-            </div>
+        <li class="nav-item dropdown"> 
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  Plots
+                  <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="themes">
+                  <a class="dropdown-item" href="index.html">Home</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
+                  <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
+                  <a class="dropdown-item" href="cases_percap_01_2020.html">Cases Per Capita Jan 2020</a>
+                  <a class="dropdown-item" href="cases_percap_02_2020.html">Cases Per Capita Feb 2020</a>
+                  <a class="dropdown-item" href="cases_percap_03_2020.html">Cases Per Capita  Mar 2020</a>
+                  <a class="dropdown-item" href="cases_percap_04_2020.html">Cases Per Capita  Apr 2020</a>
+                  <a class="dropdown-item" href="cases_percap_05_2020.html">Cases Per Capita  May 2020</a>
+                  <a class="dropdown-item" href="cases_percap_06_2020.html">Cases Per Capita  Jun 2020</a>
+                  <a class="dropdown-item" href="cases_percap_07_2020.html">Cases Per Capita  Jul 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_01_2020.html">Deaths Per Capita Jan 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_02_2020.html">Deaths Per Capita Feb 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_03_2020.html">DeathsPer Capita  Mar 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_04_2020.html">Deaths Per Capita  Apr 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_05_2020.html">Deaths Per Capita  May 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_06_2020.html">Deaths Per Capita  Jun 2020</a>
+                  <a class="dropdown-item" href="deaths_percap_07_2020.html">Deaths Per Capita  Jul 2020</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  Comparisons
+                  <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="themes">
+                  <a class="dropdown-item" href="index.html">Home</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="cases_percap_alltime.html">Per Capita Cases- All Months</a>
+                  <a class="dropdown-item" href="deaths_percap_alltime.html">Per Capita Deaths- All Months</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+      
       <!--finished with navbar onto page header  -->
       <div class = "row">
         <div class= "container">
@@ -145,5 +144,8 @@
         </div>
       </div> 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

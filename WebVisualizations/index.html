@@ -4,162 +4,231 @@
   <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Covid-19 in the U.S.</title>
 
     <!-- Bring in our bootstrap stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+    
   </head>
   <!-- define body -->
   <body>
     <!-- Side navigation -->
-    <div class="sidenav">
-      <div class="bs-component">
-        <div class="card mb-3">
-          <h4 class="card-header">Cases</h4>
-          <div class="card-body">
-            <h6 class="card-subtitle text-muted">State Level</h6>
-          </div>
-          <a href="cases_barchartrace.html" >
-              <img src= "assets\Cases_State_July18.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
-          </a> 
+    <div class= "wrapper">
+      <nav id="sidebar">
+        <div id ="dimiss">
+          <i class="fas fa-arrow-left"></i>
         </div>
-        <div class="card mb-3">
-          <h4 class="card-header">Deaths</h4>
-          <div class="card-body">
-            <h6 class="card-subtitle text-muted">State Level</h6>
-          </div>
-          <a href="deaths_barchartrace.html" >
-              <img src= "assets\Deaths_July2018.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 deaths by state">
-          </a> 
+
+        <div class = "sidebar-header">
+          <h3 >Plots</h3>
+          <strong>PLT</strong>
         </div>
-        <div class="card mb-3">
-          <h4 class="card-header">Per Capita Cases</h4>
-          <div class="card-body">
-            <h6 class="card-subtitle text-muted">County Level</h6>
-          </div>
-          <a href="cases_percap_alltime.html">
-            <img src= "assets\07_18_2020_percap_cases.png"style="height: 150px; width: 100%; display: block;" alt="A map showing per capita Covid-19 casess by county in Jul 2020">
-          </a> 
-        </div>
-        <div class="card mb-3">
-          <h4 class="card-header">Per Capita Deaths</h4>
-          <div class="card-body">
-            <h6 class="card-subtitle text-muted">County Level</h6>
-          </div>
-          <a href="#" class="../viz1/">
-            <img src= "assets\07_18_2020_percap_death.png"style="height: 150px; width: 100%; display: block;" alt="A map showing per capita Covid-19 deaths by county in Jul 2020">
-          </a> 
-          <div class="card-body">
-            <p class="card-text">State by state cases over time depicted as a bar chart race.</p>
-          </div>
+      
+        <!-- cases animation link card -->
+        <ul class= "list-unstyled components">
+          <li class = "active">
+            <div class="card mb-3">
+              <h4 class="card-header">Cases</h4>
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">State Level</h6>
+              </div>
+              <a href="cases_barchartrace.html" >
+                  <img src= "assets\Cases_State_July18.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 cases by state">
+              </a> 
+            </div>
+          </li>
           
-          <div class="card-footer text-muted">
-            Updated:07/20/2020
-          </div>
-        </div>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-    <div class ="container">
-      <div class = "row"></div>
+          <!-- deaths animation link card -->
+          <li class = "active">
+            <div class="card mb-3">
+              <h4 class="card-header">Deaths</h4>
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">State Level</h6>
+              </div>
+              <a href="deaths_barchartrace.html" >
+                  <img src= "assets\Deaths_July2018.png"style="height: 150px; width: 100%; display: block;" alt="A bar chart showing number of Covid-19 deaths by state">
+              </a> 
+            </div>
+          </li>
+          
+          <!-- per capita cases link card -->
+          <li class= "active">
+            <div class="card mb-3">
+              <h4 class="card-header">Per Capita Cases</h4>
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">County Level</h6>
+              </div>
+              <a href="cases_percap_alltime.html">
+                <img src= "assets\07_18_2020_percap_cases.png"style="height: 150px; width: 100%; display: block;" alt="A map showing per capita Covid-19 casess by county in Jul 2020">
+              </a> 
+            </div>
+          </li>
+          
+          <!-- per capita deaths link -->
+          <li class = "active">
+            <div class="card mb-3">
+              <h4 class="card-header">Per Capita Deaths</h4>
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">County Level</h6>
+              </div>
+              <a href="#" class="deaths_percap_alltime.html">
+                <img src= "assets\07_18_2020_percap_death.png"style="height: 150px; width: 100%; display: block;" alt="A map showing per capita Covid-19 deaths by county in Jul 2020">
+              </a> 
+              </div>
+              <p> Updated:07/22/2020 </p>
+          </li>
+        </ul>
+      </nav>
+         
+      <div id ="content">
         <!-- start of nav bar -->
-        <div class ="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
           <!-- container for nav bar content -->
-          <div class= container>
-            <a href="../" class="navbar-brand">Covid-19 in the U.S.</a>
+          <div class= "container">
+            <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
             <!-- button to show or hide nav items?? -->
             <button class= "navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
               <span class= "navbar-toggler-icon"></span>
             </button>
+            <!-- $('.dropdown-toggle').dropdown() -->
             <div class= "collapse navbar-collapse" id="navbarResponsive">
               <ul class= "navbar-nav mr-auto">
-                <!-- drop down item in navbar -->
-                <li class="nav-item dropdown show">
-                  <!-- learn how this works? Javascript to toggle? -->
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" 
-                  aria-expanded="false">
+                <!-- Plots drop down item in navbar -->
+                <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     Plots
-                    <span class="caret"></span>
-                    <!-- ::after -->
+                    <span class="rt_caret"></span>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="themes">
                     <a class="dropdown-item" href="index.html">Home</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
-                    <a class="dropdown-item" href="../vizdeaths_barchartrace.html2/">Timelapse of Deaths</a>
-                    <a class="dropdown-item" href="../viz3">Cases Feb 2020</a>
-                    <a class="dropdown-item" href="../viz4/">Cases Mar 2020</a>
-                    <a class="dropdown-item" href="../viz5/">Cases Apr 2020</a>
-                    <a class="dropdown-item" href="../viz6/">Cases May 2020</a>
-                    <a class="dropdown-item" href="../viz7/">Cases Jun 2020</a>
-                    <a class="dropdown-item" href="../viz8/">Cases Jul 2020</a>
-                    <a class="dropdown-item" href="../viz8/">Cases Per Capita Jul 2020</a>
-                    <a class="dropdown-item" href="../viz9/">Deaths Per Capita Jul 2020</a> 
+                    <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
+                    <a class="dropdown-item" href="cases_percap_01_2020.html">Cases Per Capita Jan 2020</a>
+                    <a class="dropdown-item" href="cases_percap_02_2020.html">Cases Per Capita Feb 2020</a>
+                    <a class="dropdown-item" href="cases_percap_03_2020.html">Cases Per Capita  Mar 2020</a>
+                    <a class="dropdown-item" href="cases_percap_04_2020.html">Cases Per Capita  Apr 2020</a>
+                    <a class="dropdown-item" href="cases_percap_05_2020.html">Cases Per Capita  May 2020</a>
+                    <a class="dropdown-item" href="cases_percap_06_2020.html">Cases Per Capita  Jun 2020</a>
+                    <a class="dropdown-item" href="cases_percap_07_2020.html">Cases Per Capita  Jul 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_01_2020.html">Deaths Per Capita Jan 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_02_2020.html">Deaths Per Capita Feb 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_03_2020.html">DeathsPer Capita  Mar 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_04_2020.html">Deaths Per Capita  Apr 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_05_2020.html">Deaths Per Capita  May 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_06_2020.html">Deaths Per Capita  Jun 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_07_2020.html">Deaths Per Capita  Jul 2020</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Comparisons 
+                  </a>
+                  <span class="rt_caret"></span>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="cases_percap_alltime.html">Per Capita Cases- All Months</a>
+                    <a class="dropdown-item" href="deaths_percap_alltime.html">Per Capita Deaths- All Months</a>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../Comparisons/">Comparisons</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../Data/">Data</a>
+                  <a class="nav-link" href="data.html">Data</a>
                 </li>
               </ul>
             </div>
+         
+            <button type ="button" id ="sidebarCollapse" class ="btn btn-info">
+              <i class= "fas fa-align-left"></i>
+              <span>Toggle Sidebar</span>
+            </button>
           </div>
-        </div>
-      </div>
+        </nav>
+       </div>
+    </div> 
+<!-- dark overlay element -->
+<div class = "overlay"></div>
+
+      
       <!--finished with navbar onto page header  -->
       <div class = "row">
-        <div class= "container">
-          <div class="page-header" id="banner">
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-          <div class= "bs-docs-section">
-              <div class = "row">
-                <div class= "col-lg-9">           
-                  <div class="bs-component"> 
-                    <h3>Analysis of Covid-19 Spread in the United States</h3>
+        <div class ="col-lg-9"></div>
+          <div class= "container">
+            <div class="page-header" >
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+            <div class= "bs-docs-section">
+                <div class = "row">
+                  <div class= "col-lg-9">           
+                    
+                      <h3>Analysis of Covid-19 Spread in the United States</h3>
+                    
+                  </div>
+                <br>
+                <div class= "row">
+                  <div class= "col-lg-9">
+                  
+                      <p> Covid-19 data from Johns Hopkins University was used to create several visualizations
+                        of the geographic distribution of cases and deaths over time.
+                      </p>
+                      <p> First, the number of cases and deaths was studied by state. Animations called bar chart races were created to show the 
+                        relative number of cases and deaths by state over time.  Next, population data was added to the dataset
+                        and the per-capita number of cases and deaths was calculated for each location and date.  Finally, the 
+                        data was geographically mapped by county with a colorscheme representing the per capita number or cases
+                        and per capita number of deaths for each county.  
+                      </p> 
+                      <p>
+                        Per Capita data captures the progression of viral
+                        contagion within a given community and can better allow communities to prepare mitigation effort
+                      </p> 
+                    
                   </div>
                 </div>
-              <br>
-              <div class= "row">
-                <div class= "col-lg-9">
-                  <div class= "bs-component">
-                    <p> Covid-19 data from Johns Hopkins University was used to create several visualizations
-                      of the geographic distribution of cases and deaths over time.
-                    </p>
-                    <p> First, the number of cases and deaths was studied by state. Animations called bar chart races were created to show the 
-                      relative number of cases and deaths by state over time.  Next, population data was added to the dataset
-                      and the per-capita number of cases and deaths was calculated for each location and date.  Finally, the 
-                      data was geographically mapped by county with a colorscheme representing the per capita number or cases
-                      and per capita number of deaths for each county.  
-                    </p> 
-                    <p>
-                      Per Capita data captures the progression of viral
-                      contagion within a given community and can better allow communities to prepare mitigation effort
-                    </p> 
+                <div class ="row">
+                  <div class= "col-lg-9">
+                    <a href="assets\07_18_2020_percap_cases.png"></a>
+                      <img src= "assets\07_18_2020_percap_cases.png"style="height: 500px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19">
+                    </a>
                   </div>
-                </div>
-              </div>
-              <div class ="row">
-                <div class= "col-lg-12">
-                  <a href="#" class="../viz1/">
-                    <img src= "assets\07_18_2020_percap_cases.png"style="height: 500px; width: 100%; display: block;" alt="A color coded map of the continental U.S. showing percent county population infected with Covid-19">
-                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div> 
+    
+      <div class= "row"
+        <footer class = "fixed-bottom" id= "footer">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="list-unstyled">
+                <li class="fixed-bottom-center"><a href="#top">Back to top</a></li>
+                <li><a href="https://ellenrud84.github.io/">GitHub</a></li>
+                <li><a href="https://twitter.com/Ellen_Engineer">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/EllenTheEngineer">linkedin</a></li>
+                <li><a href=".https://facebook.com/elle.rud">facebook</a></li>
+                <!-- <li><a href="../help/#donate">Donate</a></li> -->
+              </ul>
+              <p>Creator: Ellen Gentile <!--<a href="https://personalwebsitehere">Name</a>.--></p>
+              <!-- <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p> -->
+              <!-- <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="https://fontawesome.com/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p> -->
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

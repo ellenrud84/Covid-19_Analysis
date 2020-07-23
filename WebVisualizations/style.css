@@ -1,3 +1,4 @@
+.nav-background {background-color: black}
 /*!
  * Bootswatch v4.5.0
  * Homepage: https://bootswatch.com
@@ -71,7 +72,7 @@ body {
   text-align: left;
   background-color: #fff;
   /* ellen edited the padding from the template */
-  padding-top:150px
+  padding-top:125px
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -170,7 +171,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: black !important;
   text-decoration: underline;
 }
 
@@ -383,6 +384,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1.5rem;
+  color:white
 }
 
 h4, .h4 {
@@ -2810,7 +2812,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
-  color: #fff;
+  color:#fff;
   background-color: #010000;
   border-color: black;
 }
@@ -3458,13 +3460,17 @@ input[type="button"].btn-block {
 }
 
 .dropdown-toggle {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .dropdown-toggle::after {
-  display: inline-block;
+  display:block;
+  position: absolute;
+  top: 50%;
+  right:20px;
+  transform: translateY(-50%);
   margin-left: 0.255em;
-  vertical-align: 0.255em;
+  /* vertical-align: 0.255em; */
   content: "";
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
@@ -4971,7 +4977,7 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4979,7 +4985,7 @@ input[type="button"].btn-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 0;
+  min-width: 100;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -6956,7 +6962,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: black !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -8298,7 +8304,7 @@ button.bg-dark:focus {
 
 .fixed-bottom {
   position: fixed;
-  right: 0;
+  right: 50%;
   bottom: 0;
   left: 0;
   z-index: 1030;
@@ -10368,24 +10374,9 @@ button.bg-dark:focus {
   color: #1a1a1a !important;
 }
 
-a.text-primary:hover, a.text-primary:focus {
-  color: black !important;
-}
 
 .text-secondary {
   color: #fff !important;
-}
-
-a.text-secondary:hover, a.text-secondary:focus {
-  color: #d9d9d9 !important;
-}
-
-.text-success {
-  color: #4BBF73 !important;
-}
-
-a.text-success:hover, a.text-success:focus {
-  color: #328c51 !important;
 }
 
 .text-info {
@@ -10394,22 +10385,6 @@ a.text-success:hover, a.text-success:focus {
 
 a.text-info:hover, a.text-info:focus {
   color: #15698c !important;
-}
-
-.text-warning {
-  color: #f0ad4e !important;
-}
-
-a.text-warning:hover, a.text-warning:focus {
-  color: #df8a13 !important;
-}
-
-.text-danger {
-  color: #d9534f !important;
-}
-
-a.text-danger:hover, a.text-danger:focus {
-  color: #b52b27 !important;
 }
 
 .text-light {
@@ -10442,34 +10417,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.text-break {
-  word-wrap: break-word !important;
-}
-
-.text-reset {
-  color: inherit !important;
-}
-
-.visible {
-  visibility: visible !important;
-}
-
-.invisible {
-  visibility: hidden !important;
 }
 
 @media print {
@@ -10567,20 +10514,8 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 2rem;
 }
 
-.bg-primary {
-  background-color: #1a1a1a !important;
-}
-
-.bg-light {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.bg-light.navbar-fixed-top {
-  border-width: 0 0 1px 0;
-}
-
-.bg-light.navbar-bottom-top {
-  border-width: 1px 0 0 0;
+.bg-black {
+  background-color: black !important;
 }
 
 .nav-item {
@@ -10590,30 +10525,9 @@ a.text-dark:hover, a.text-dark:focus {
 .btn {
   font-size: 0.765625rem;
   text-transform: uppercase;
-}
-
-.btn-sm, .btn-group-sm > .btn {
-  font-size: 10px;
-}
-
-.btn-warning, .btn-warning:hover, .btn-warning:not([disabled]):not(.disabled):active, .btn-warning:focus {
-  color: #fff;
-}
-
-.btn-outline-secondary {
-  border-color: #919aa1;
-  color: #919aa1;
-}
-
-.btn-outline-secondary:not([disabled]):not(.disabled):hover, .btn-outline-secondary:not([disabled]):not(.disabled):focus, .btn-outline-secondary:not([disabled]):not(.disabled):active {
-  background-color: #ced4da;
-  border-color: #ced4da;
-  color: #fff;
-}
-
-.btn-outline-secondary:not([disabled]):not(.disabled):focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
+  background-color:black !important;
+  border-width: 1px;
+  border-color: gray;
 }
 
 [class*="btn-outline-"] {
@@ -10653,24 +10567,9 @@ th {
   padding: 0.75rem;
 }
 
-.custom-switch .custom-control-label::after {
-  top: calc(0.15625rem + 2px);
-  left: calc(-2.25rem + 2px);
-  width: calc(1rem - 4px);
-  height: calc(1rem - 4px);
-}
-
 .dropdown-menu {
   font-size: 0.765625rem;
   text-transform: none;
-}
-
-.badge {
-  padding-top: 0.28rem;
-}
-
-.badge-pill {
-  border-radius: 10rem;
 }
 
 .list-group-item h1, .list-group-item h2, .list-group-item h3, .list-group-item h4, .list-group-item h5, .list-group-item h6,
@@ -10683,17 +10582,19 @@ th {
 }
 
 
-/* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 300px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 84%;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 100px;
+/* The sidebar menu added to templates css by Ellen Rud from bootstrap*/ 
+.sidebar {
+  height: 100% !important; /* Full-height: remove this if you want "auto" height */
+  width: 20% !important ; /* Set the width of the sidebar */
+  position: fixed !important; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1 !important; /* Stay on top */
+  top: 0 !important; /* Stay at the top */
+  left: 80% !important;
+  background-color: #111 !important; /* Black */
+  overflow-x: visible; /* Disable horizontal scroll */
+  overflow-y: scroll;
+  padding-top: 100px !important;
+  ;
 }
 
 /* The navigation menu links */
@@ -10707,7 +10608,7 @@ th {
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #554d4d;
+  color: #9ddaf1;
 }
 
 /* Style page content */
@@ -10720,4 +10621,201 @@ th {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.wrapper {
+  display:block;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  position: absolute;
+  top: 100px;
+  right:0;
+  height: 100vh;
+  /* top layer */
+  z-index: 999;
+  /* background: black; */
+  /* color: var(--gray-dark);
+  transition: all 0.3s; */
+}
+.overlay{
+  display: none;
+  position: fixed;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  /* transparent black */
+  background: rgba(0,0,0,0.7);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 998;
+  opacity:0;
+  /* animate the transition */
+  transition: all .05s ease-in-out;
+}
+
+.overlay.active{
+  display: block;
+  opacity:1;
+}
+#dismiss {
+  width: 35px;
+  height: 35px;
+  position: aboslute;
+  /* top right corner of sidebar */
+  top:10px;
+  right:10px
+}
+#sidebar .sidebar-header{
+  padding: 20px;
+  padding-top:10;
+  background: black;
+  color:white;
+}
+#sidebar .sidebar-header strong{
+  display: none;
+}
+
+#sidebar .ulcomponents{
+  padding: 20px;
+  border-bottom: 1px solid black
+}
+#sidebar ul p{
+  color: #fff;
+  padding: 10px
+}
+#sidebar ul li a {
+ text-align: left;
+}
+
+#sidebar.active ul li a{
+  padding: 20 px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i{
+  margin-right: 0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a{
+  padding: 10px !important;
+}
+#sidebar.active .dropdown-toggle::after{
+  top:auto;
+  bottom: 10px;
+  right:50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+#sidebar.active .sidebar-header strong{
+  display: block;
+}
+
+#sidebar ul li a:hover{
+  color: var(--gray-dark);
+  background: black;
+}
+
+sidebar ul li.active > a, a[aria-expanded ="true"]{
+  color: #fff;
+  background: var(--gray-dark)
+}
+
+ul ul a{
+  font-size: .9em !important;
+  Padding-right: 30px !important;
+  background: var(--gray-dark)
+}
+
+#sidebar.active{
+  margin-left: -250px;
+  min-width:80px;
+  max-width: 80px;
+  text-align:center;
+}
+#sidebar.active .sidebar-header h3{
+  display: none;
+}
+
+
+a[datatoggle="collapse"]{
+  display: block;
+  position:absolute;
+  left: 20px;
+  transform:translateY(-50%)
+}
+.dropdown-toggle::after{
+  display: block;
+
+}
+
+@media (max-width: 768px){
+  /* reappearing sidebar on toggle button click */
+  #sidebar{
+    margin-right:0;
+  }
+  /* 80 px and its contents aligned ot center. pushing it off the screen with the negative and right margin */
+  #sidebar.active{
+    margin-right:-80px !important;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+  }
+/* toggling the sidebar header content  to hide the big heading and show the small [strong] and vice versa*/
+  #sidebar .sidebar-header strong {
+    display: none;
+  }
+  #sidebar.active .sidebar-header h3{
+    display: none;
+  }
+  #sidebar.active .sidebar-header strong {
+    display: block;
+  }
+  /* downsize the nav links font size: */
+  #sidebar.active ul li a {
+    padding: 2px 10px;
+    font-size: 0.85 em;
+  }
+  #sidebar.active ul li a i{
+    margin-right:0;
+    display: block;
+    font-size:1.8em;
+    margin-bottom:5px
+  }
+  /* adjust hte dopdown links padding */
+  #sidebar.active ul ul a {
+    padding: 10px !important;
+  }
+  /* change the arrow position to bottom center position, translateX(50%) works with right: 50% to center arrow */
+  .dropdown-toggle::after{
+    top:auto;
+    bottom:10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%)
+  }
+}
+
+.rt_caret{
+  text-align: right;
+  vertical-align: bottom;
+  padding-left:10px; 
+}
+
+#pages{
+  padding-top:100px
 }
