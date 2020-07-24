@@ -205,8 +205,10 @@ figure {
 }
 
 img {
-  vertical-align: middle;
   border-style: none;
+  height: 100%;
+  width:100%;
+  display: block;
 }
 
 svg {
@@ -486,8 +488,9 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 150px;
+  display: block;
 }
 
 .img-thumbnail {
@@ -3485,7 +3488,7 @@ input[type="button"].btn-block {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 20px;
   z-index: 1000;
   display: none;
   float: left;
@@ -4986,6 +4989,7 @@ input[type="button"].btn-block {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 100;
+  height:10%;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -10589,12 +10593,16 @@ th {
   position: fixed !important; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1 !important; /* Stay on top */
   top: 0 !important; /* Stay at the top */
-  left: 80% !important;
+  right: 0 !important;
   background-color: #111 !important; /* Black */
   overflow-x: visible; /* Disable horizontal scroll */
   overflow-y: scroll;
   padding-top: 100px !important;
-  ;
+  padding-bottom: 100px !important;
+  z-index: 999;
+  background: black;
+  color: black;
+  transition: all .3s;
 }
 
 /* The navigation menu links */
@@ -10612,14 +10620,22 @@ th {
 }
 
 /* Style page content */
+.main-index {
+  margin-right:25%!important; /* Same side and width as the sidebar */
+  margin-left:5%! important;
+  padding: 10px 10px;
+}
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+  padding: 10px 10px;
+  position:absolute;
+  margin-left:10%;
+  margin-right: 10%;
+ 
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 20px;}
   .sidenav a {font-size: 18px;}
 }
 
@@ -10633,103 +10649,79 @@ a, a:hover, a:focus {
   transition: all 0.3s;
 }
 
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  position: absolute;
-  top: 100px;
+/* #sidebar {
+  width: 18%;
+  position: fixed;
+  height: 100%;
+  top: 110px;
   right:0;
   height: 100vh;
   /* top layer */
-  z-index: 999;
-  /* background: black; */
-  /* color: var(--gray-dark);
-  transition: all 0.3s; */
-}
-.overlay{
+  /* z-index: 999;
+  background: black;
+  color: black;
+  transition: all .3s; */
+/* } */ 
+
+/* .overlay{
   display: none;
   position: fixed;
   /* full screen */
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   /* transparent black */
-  background: rgba(0,0,0,0.7);
+  /* background: rgba(0,0,0,0.7); */
   /* middle layer, i.e. appears below the sidebar */
-  z-index: 998;
-  opacity:0;
+  /* z-index: 998;
+  opacity:0; */
   /* animate the transition */
-  transition: all .05s ease-in-out;
-}
+  /* transition: all .05s ease-in-out;
+} */ */
 
-.overlay.active{
+/* .overlay.active{
   display: block;
-  opacity:1;
-}
+  /* opacity:1; */
+/* } */ */
+
 #dismiss {
   width: 35px;
   height: 35px;
   position: aboslute;
   /* top right corner of sidebar */
-  top:10px;
+  top:110px;
   right:10px
 }
-#sidebar .sidebar-header{
+
+.sidebar .sidebar-header{
   padding: 20px;
-  padding-top:10;
+  padding-top:20px;
   background: black;
   color:white;
 }
-#sidebar .sidebar-header strong{
+
+.sidebar .sidebar-header strong{
   display: none;
 }
 
-#sidebar .ulcomponents{
+.sidebar .ulcomponents{
   padding: 20px;
   border-bottom: 1px solid black
 }
-#sidebar ul p{
+
+.sidebar ul p{
   color: #fff;
   padding: 10px
 }
-#sidebar ul li a {
+.sidebar ul li a {
  text-align: left;
 }
 
-#sidebar.active ul li a{
-  padding: 20 px 10px;
-  text-align: center;
-  font-size: 0.85em;
-}
-
-#sidebar.active ul li a i{
-  margin-right: 0;
-  display: block;
-  font-size: 1.8em;
-  margin-bottom: 5px;
-}
-
-#sidebar.active ul ul a{
-  padding: 10px !important;
-}
-#sidebar.active .dropdown-toggle::after{
-  top:auto;
-  bottom: 10px;
-  right:50%;
-  -webkit-transform: translateX(50%);
-  -ms-transform: translateX(50%);
-  transform: translateX(50%);
-}
-
-#sidebar.active .sidebar-header strong{
-  display: block;
-}
-
-#sidebar ul li a:hover{
+.sidebar ul li a:hover{
   color: var(--gray-dark);
   background: black;
 }
 
-sidebar ul li.active > a, a[aria-expanded ="true"]{
+.sidebar ul li.active > a, a[aria-expanded ="true"]{
   color: #fff;
   background: var(--gray-dark)
 }
@@ -10739,17 +10731,6 @@ ul ul a{
   Padding-right: 30px !important;
   background: var(--gray-dark)
 }
-
-#sidebar.active{
-  margin-left: -250px;
-  min-width:80px;
-  max-width: 80px;
-  text-align:center;
-}
-#sidebar.active .sidebar-header h3{
-  display: none;
-}
-
 
 a[datatoggle="collapse"]{
   display: block;
@@ -10764,39 +10745,16 @@ a[datatoggle="collapse"]{
 
 @media (max-width: 768px){
   /* reappearing sidebar on toggle button click */
-  #sidebar{
+  .sidebar{
     margin-right:0;
   }
-  /* 80 px and its contents aligned ot center. pushing it off the screen with the negative and right margin */
-  #sidebar.active{
-    margin-right:-80px !important;
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
+  .sm-font{
+    font-size:8pt!important;
   }
-/* toggling the sidebar header content  to hide the big heading and show the small [strong] and vice versa*/
-  #sidebar .sidebar-header strong {
-    display: none;
-  }
-  #sidebar.active .sidebar-header h3{
-    display: none;
-  }
-  #sidebar.active .sidebar-header strong {
-    display: block;
-  }
-  /* downsize the nav links font size: */
-  #sidebar.active ul li a {
-    padding: 2px 10px;
-    font-size: 0.85 em;
-  }
-  #sidebar.active ul li a i{
-    margin-right:0;
-    display: block;
-    font-size:1.8em;
-    margin-bottom:5px
-  }
-  /* adjust hte dopdown links padding */
-  #sidebar.active ul ul a {
+ 
+
+  /* adjust the dopdown links padding */
+  .sidebar.active ul ul a {
     padding: 10px !important;
   }
   /* change the arrow position to bottom center position, translateX(50%) works with right: 50% to center arrow */
@@ -10811,11 +10769,24 @@ a[datatoggle="collapse"]{
 }
 
 .rt_caret{
-  text-align: right;
+  text-align: end ;
   vertical-align: bottom;
   padding-left:10px; 
 }
+.small{
+  width:80%;
+  height:80%;
+}
 
-#pages{
-  padding-top:100px
+.resp_vid{
+  position: fixed;
+  display: block;
+  height: 75%;
+  width: 75%;
+}
+.resp_img{
+  position: fixed;
+  display: block;
+  height: auto;
+  width: 50%;
 }
