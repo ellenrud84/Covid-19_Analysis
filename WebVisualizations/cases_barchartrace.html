@@ -10,72 +10,76 @@
     <!-- Bring in our bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <!-- define body -->
   <body>
  
     <div class="container">
-      <!-- start of nav bar -->
-      <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
-        <!-- container for nav bar content -->
-        <div class= "container">
-          <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
-          <!-- button to show or hide nav items?? -->
-          <button class= "navbar-toggler" type="button" data-toggle="collapse" 
-          data-target="#navbarResponsive" aria-controls="navbarResponsive"
-          aria-expanded="false" aria-label="Toggle navigation">
-            <span class= "navbar-toggler-icon"></span>
-          </button>
-          <!-- $('.dropdown-toggle').dropdown() -->
-          <div class= "collapse navbar-collapse" id="navbarResponsive">
-            <ul class= "navbar-nav mr-auto">
-              <!-- Plots drop down item in navbar -->
-              <li class="nav-item dropdown"> 
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Plots
+      <div class = "main">
+        <!-- start of nav bar -->
+        <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
+          <!-- container for nav bar content -->
+          <div class= "container-fluid">
+            <a href="index.html" class="navbar-brand mr-auto">Covid-19 in the U.S.</a>
+            <!-- button to show or hide nav items?? -->
+            <button class= "navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+              <span class= "navbar-toggler-icon"></span>
+            </button>
+            <!-- $('.dropdown-toggle').dropdown() -->
+            <div class= "collapse navbar-collapse" id="navbarResponsive">
+              <ul class= "navbar-nav ml-auto">
+                <!-- Plots drop down item in navbar -->
+                <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Plots
+                    <span class="rt_caret"></span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
+                    <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
+                    <a class="dropdown-item" href="cases_percap_01_2020.html">Cases Per Capita Jan 2020</a>
+                    <a class="dropdown-item" href="cases_percap_02_2020.html">Cases Per Capita Feb 2020</a>
+                    <a class="dropdown-item" href="cases_percap_03_2020.html">Cases Per Capita  Mar 2020</a>
+                    <a class="dropdown-item" href="cases_percap_04_2020.html">Cases Per Capita  Apr 2020</a>
+                    <a class="dropdown-item" href="cases_percap_05_2020.html">Cases Per Capita  May 2020</a>
+                    <a class="dropdown-item" href="cases_percap_06_2020.html">Cases Per Capita  Jun 2020</a>
+                    <a class="dropdown-item" href="cases_percap_07_2020.html">Cases Per Capita  Jul 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_01_2020.html">Deaths Per Capita Jan 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_02_2020.html">Deaths Per Capita Feb 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_03_2020.html">DeathsPer Capita  Mar 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_04_2020.html">Deaths Per Capita  Apr 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_05_2020.html">Deaths Per Capita  May 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_06_2020.html">Deaths Per Capita  Jun 2020</a>
+                    <a class="dropdown-item" href="deaths_percap_07_2020.html">Deaths Per Capita  Jul 2020</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Comparisons 
+                  </a>
                   <span class="rt_caret"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="themes">
-                  <a class="dropdown-item" href="index.html">Home</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="cases_barchartrace.html">Timelapse of Cases</a>
-                  <a class="dropdown-item" href="deaths_barchartrace.html">Timelapse of Deaths</a>
-                  <a class="dropdown-item" href="cases_percap_01_2020.html">Cases Per Capita Jan 2020</a>
-                  <a class="dropdown-item" href="cases_percap_02_2020.html">Cases Per Capita Feb 2020</a>
-                  <a class="dropdown-item" href="cases_percap_03_2020.html">Cases Per Capita  Mar 2020</a>
-                  <a class="dropdown-item" href="cases_percap_04_2020.html">Cases Per Capita  Apr 2020</a>
-                  <a class="dropdown-item" href="cases_percap_05_2020.html">Cases Per Capita  May 2020</a>
-                  <a class="dropdown-item" href="cases_percap_06_2020.html">Cases Per Capita  Jun 2020</a>
-                  <a class="dropdown-item" href="cases_percap_07_2020.html">Cases Per Capita  Jul 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_01_2020.html">Deaths Per Capita Jan 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_02_2020.html">Deaths Per Capita Feb 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_03_2020.html">DeathsPer Capita  Mar 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_04_2020.html">Deaths Per Capita  Apr 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_05_2020.html">Deaths Per Capita  May 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_06_2020.html">Deaths Per Capita  Jun 2020</a>
-                  <a class="dropdown-item" href="deaths_percap_07_2020.html">Deaths Per Capita  Jul 2020</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Comparisons 
-                </a>
-                <span class="rt_caret"></span>
-                <div class="dropdown-menu" aria-labelledby="themes">
-                  <a class="dropdown-item" href="index.html">Home</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="cases_percap_alltime.html">Per Capita Cases- All Months</a>
-                  <a class="dropdown-item" href="deaths_percap_alltime.html">Per Capita Deaths- All Months</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="data.html">Data</a>
-              </li>
-            </ul>
+                  <div class="dropdown-menu" aria-labelledby="themes">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="cases_percap_alltime.html">Per Capita Cases- All Months</a>
+                    <a class="dropdown-item" href="deaths_percap_alltime.html">Per Capita Deaths- All Months</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="data.html">Data</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+       </div>
+       
+    </div> 
       
       <!--finished with navbar onto page header  -->
      

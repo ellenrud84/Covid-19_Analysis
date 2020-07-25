@@ -14,11 +14,11 @@
   </head>
   <!-- define body -->
   <body>
-    <div id ="content">
+    <div id ="container main">
       <!-- start of nav bar -->
       <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
         <!-- container for nav bar content -->
-        <div class= "container">
+        <div class= "container-fluid">
           <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
           <!-- button to show or hide nav items?? -->
           <button class= "navbar-toggler" type="button" data-toggle="collapse" 
@@ -28,7 +28,7 @@
           </button>
           <!-- $('.dropdown-toggle').dropdown() -->
           <div class= "collapse navbar-collapse" id="navbarResponsive">
-            <ul class= "navbar-nav mr-auto">
+            <ul class= "navbar-nav ml-auto">
               <!-- Plots drop down item in navbar -->
               <li class="nav-item dropdown"> 
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -78,14 +78,16 @@
     </div>
        <!--finished with navbar onto page header  -->
 
-    <div class= "main container"> 
+    <div class= "main container" style= "margin-bottom:100px;"> 
 
       <!-- create frame for first table with scrollbar -->
       <div class = "row">  <h4> State Data</h4> </div>
       <div class = "row"> <a href="us_counties.html"> Table of State and County Number of Cases and Deaths</a></div>
+      
       <div class = "row">  
-        <iframe frameborder: "1" width ="70%" height = "35%" 
-          src="us_counties.html" allowfullscreen = "True" name="Table of State and County Number of Cases and Deaths" style="border:1px solid black"></iframe>
+        <iframe frameborder: "1" width ="70%" height = "37%" 
+          src="us_counties.html" allowfullscreen = "True" name="Table of State and County Number of Cases and Deaths" style="border:1px solid black">
+        </iframe>
       </div>
 
       <div class = "row"> 
@@ -95,28 +97,31 @@
       <div class= "row">
         <h4> Cases Per Capita Data</h4>
       </div>
-            
+      
+      <div class= "row">
+        <a href="cases_per_capita.html" > Table of County Based Per Capita Case Data</a>
+      </div>
+
       <div class = "row"> 
-      <a href="cases_per_capita.html"> Table of County Based Per Capita Cases Data</a>
+        <iframe frameborder: "1" width ="70%" height = "37%" 
+          src="cases_per_capita.html" allowfullscreen = "True" name="Table of State and County Number of Cases and Deaths" style="border:1px solid black">
+        </iframe>
+    
       </div>
-
-      <div class = "row">    
-        <iframe frameborder: "1" width ="80%" height = "35%" 
-          src="cases_per_capita.html"></iframe>
+      <div class = "row"> 
+        <p></p>
       </div>
-
-
-
-        
+       
 
       <div class = "row">  
               <h4> Deaths Per Capita Data</h4> 
       </div>
+
       <div class = "row"> 
               <a href= "death_per_capita.html"> Table of County Based Per Capita Deaths Data</a>
       </div>
       <div class = "row">    
-              <iframe frameborder: "1" width ="80%" height = "25%" 
+              <iframe frameborder: "1" width ="70%" height = "37%" 
               src="death_per_capita.html"></iframe>
       </div>
 

@@ -10598,7 +10598,7 @@ th {
 
 /* The sidebar menu added to templates css by Ellen Rud from bootstrap*/ 
 .sidebar {
-  height: 100% !important; /* Full-height: remove this if you want "auto" height */
+  height: 90% !important; /* Full-height: remove this if you want "auto" height */
   width: 20% !important ; /* Set the width of the sidebar */
   position: fixed !important; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1 !important; /* Stay on top */
@@ -10609,6 +10609,7 @@ th {
   overflow-y: scroll;
   padding-top: 10px !important;
   padding-bottom: 100px !important;
+  margin-bottom: 150px !important;
   z-index: 999;
   background: black;
   color: black;
@@ -10633,6 +10634,7 @@ th {
 .main-index {
   margin-right:25%!important; /* Same side and width as the sidebar */
   margin-left:5%! important;
+  margin-bottom:15%;
   padding: 10px 10px;
 }
 .main {
@@ -10640,6 +10642,7 @@ th {
   position:absolute;
   margin-left:10%;
   margin-right: 10%;
+  margin-bottom:15%;
  
 }
 
@@ -10762,6 +10765,10 @@ a[datatoggle="collapse"]{
   .sm-font{
     font-size:8pt!important;
   }
+  .main, .main-index {
+    background-color: beige;
+    color: dark var(--gray-dark)
+  }
  
 
   /* adjust the dopdown links padding */
@@ -10790,13 +10797,14 @@ a[datatoggle="collapse"]{
 }
 
 .resp_vid{
-  position: fixed;
+  position: relative;
+  top:0;
   display: block;
-  height: 75%;
-  width: 75%;
+  height: 70%;
+  width: auto;
 }
 .resp_img{
-  position: fixed;
+  position: static;
   display: block;
   height: auto;
   width: 50%;
