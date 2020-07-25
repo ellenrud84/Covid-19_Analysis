@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap JS -->
     
     
@@ -85,7 +86,7 @@
         <nav class ="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
           <!-- container for nav bar content -->
           <div class= "container-fluid">
-            <a href="index.html" class="navbar-brand">Covid-19 in the U.S.</a>
+            <a href="index.html" class="navbar-brand mr-auto">Covid-19 in the U.S.</a>
             <!-- button to show or hide nav items?? -->
             <button class= "navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -94,7 +95,7 @@
             </button>
             <!-- $('.dropdown-toggle').dropdown() -->
             <div class= "collapse navbar-collapse" id="navbarResponsive">
-              <ul class= "navbar-nav mr-auto">
+              <ul class= "navbar-nav ml-auto">
                 <!-- Plots drop down item in navbar -->
                 <li class="nav-item dropdown"> 
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -187,26 +188,54 @@
             </div>
           </div>
     </div> 
+
+    <!-- footer: ref https://mdbootstrap.com/docs/jquery/navigation/footer/#sticky-footer -->
     
-    <div class= "container"
-        <footer class = "modal-footer" id= "footer">
-            <div class="contents">
-              <ul class="list-unstyled">
-                <li class="fixed-bottom-center"><a href="#top">Back to top</a></li>
-                <li><a href="https://ellenrud84.github.io/">GitHub</a></li>
-                <li><a href="https://twitter.com/Ellen_Engineer">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/EllenTheEngineer">linkedin</a></li>
-                <li><a href=".https://facebook.com/elle.rud">facebook</a></li>
-                <!-- <li><a href="../help/#donate">Donate</a></li> -->
-              </ul>
-              <p>Creator: Ellen Gentile <!--<a href="https://personalwebsitehere">Name</a>.--></p>
-              <!-- <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p> -->
-              <!-- <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="https://fontawesome.com/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p> -->
-            </div>
+    <footer class = "page-footer font-small fixed-bottom navbar-expand-lg" style="color:white; background-color: #212121;">
+
+      <!-- footer elements -->
+      <div class= "container">
+        
+        <div class = "row">
+            <!-- social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+
+              <li class="list-inline-item">
+                <p>Creator: Ellen Gentile <!--<a href="https://personalwebsitehere">Name</a>.--></p>
+              </li>
+                      
+              <li class="list-inline-item">
+                <!-- <a class="btn-floating btn-github mx-1" href="https://ellenrud84.github.io/">GitHub</a> -->
+                <i class="fa fa-github" style="font-size:36px; color: white"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a href="https://twitter.com/Ellen_Engineer">Twitter</a> -->
+                <i class="fa fa-twitter" style="font-size:36px; color:#1DA1F2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a class="btn-floating btn-li mx-1"></a>href="https://www.linkedin.com/in/EllenTheEngineer">Linkedin</a> -->
+                <i class="fa fa-linkedin-square" style="font-size:36px; color:#2867B2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a href=".https://facebook.com/elle.rud">Facebook</a> -->
+                <i class="fa fa-facebook-square" style="font-size:36px; color: #4267B2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                  <!-- Badge Code - Do Not Change The Code  for viewer counter -->
+              <a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="b3223d7b8acb25ddb70cd2d63f77d11c|5|ip|1|rgb(196, 185, 185);|#ffffff|small|s-hit">Hit Counter</a>
+              <script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+              <!-- Badge Code End Here -->
+              </li>
+
+            </ul>
           </div>
-        </footer>
+    </footer>
       
-    </div>
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

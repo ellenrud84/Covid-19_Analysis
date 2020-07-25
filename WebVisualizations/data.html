@@ -10,6 +10,7 @@
     <!-- Bring in our bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <!-- define body -->
   <body>
@@ -75,21 +76,99 @@
         </div>
       </nav>
     </div>
-      
-    <div class= "container"> 
+       <!--finished with navbar onto page header  -->
 
-      <!--finished with navbar onto page header  -->
-      <h2> State Data</h2>
-      <a href="us_counties.html"> Table of State and County Number of Cases and Deaths</a>
-      <!-- add spacer element -->
-     
-      
-      <h2> Cases Per Capita Data</h2>
+    <div class= "main container"> 
+
+      <!-- create frame for first table with scrollbar -->
+      <div class = "row">  <h4> State Data</h4> </div>
+      <div class = "row"> <a href="us_counties.html"> Table of State and County Number of Cases and Deaths</a></div>
+      <div class = "row">  
+        <iframe frameborder: "1" width ="70%" height = "35%" 
+          src="us_counties.html" allowfullscreen = "True" name="Table of State and County Number of Cases and Deaths" style="border:1px solid black"></iframe>
+      </div>
+
+      <div class = "row"> 
+        <p></p>
+      </div>
+
+      <div class= "row">
+        <h4> Cases Per Capita Data</h4>
+      </div>
+            
+      <div class = "row"> 
       <a href="cases_per_capita.html"> Table of County Based Per Capita Cases Data</a>
-      <!-- add spacer element -->
+      </div>
 
-      <h2> Header for Table 2</h2>
-      <a href= "death_per_capita.html"> Table of County Based Per Capita Deaths Data</a>
+      <div class = "row">    
+        <iframe frameborder: "1" width ="80%" height = "35%" 
+          src="cases_per_capita.html"></iframe>
+      </div>
+
+
+
+        
+
+      <div class = "row">  
+              <h4> Deaths Per Capita Data</h4> 
+      </div>
+      <div class = "row"> 
+              <a href= "death_per_capita.html"> Table of County Based Per Capita Deaths Data</a>
+      </div>
+      <div class = "row">    
+              <iframe frameborder: "1" width ="80%" height = "25%" 
+              src="death_per_capita.html"></iframe>
+      </div>
+
+       
+      
+    </div>  
+
+    <!-- footer: ref https://mdbootstrap.com/docs/jquery/navigation/footer/#sticky-footer -->
+    
+    <footer class = "page-footer font-small fixed-bottom navbar-expand-lg" style="color:white; background-color: #212121;">
+
+      <!-- footer elements -->
+      <div class= "container">
+        
+        <div class = "row">
+            <!-- social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+
+              <li class="list-inline-item">
+                <p>Creator: Ellen Gentile <!--<a href="https://personalwebsitehere">Name</a>.--></p>
+              </li>
+                      
+              <li class="list-inline-item">
+                <!-- <a class="btn-floating btn-github mx-1" href="https://ellenrud84.github.io/">GitHub</a> -->
+                <i class="fa fa-github" style="font-size:36px; color: white"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a href="https://twitter.com/Ellen_Engineer">Twitter</a> -->
+                <i class="fa fa-twitter" style="font-size:36px; color:#1DA1F2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a class="btn-floating btn-li mx-1"></a>href="https://www.linkedin.com/in/EllenTheEngineer">Linkedin</a> -->
+                <i class="fa fa-linkedin-square" style="font-size:36px; color:#2867B2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                <!-- <a href=".https://facebook.com/elle.rud">Facebook</a> -->
+                <i class="fa fa-facebook-square" style="font-size:36px; color: #4267B2"></i>
+              </li>
+
+              <li class="list-inline-item">
+                  <!-- Badge Code - Do Not Change The Code  for viewer counter -->
+              <a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="b3223d7b8acb25ddb70cd2d63f77d11c|5|ip|1|rgb(196, 185, 185);|#ffffff|small|s-hit">Hit Counter</a>
+              <script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+              <!-- Badge Code End Here -->
+              </li>
+
+            </ul>
+          </div>
+    </footer>
     
     </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

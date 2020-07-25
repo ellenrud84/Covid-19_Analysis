@@ -75,6 +75,14 @@ body {
   padding-top:125px
 }
 
+body > footer{
+  margin:0px;
+  padding:0px;
+  min-width:100%;
+  max-width:100%;
+  height:auto;
+}
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
@@ -3470,9 +3478,9 @@ input[type="button"].btn-block {
   display:block;
   position: absolute;
   top: 50%;
-  right:20px;
+  right:0;
   transform: translateY(-50%);
-  margin-left: 0.255em;
+  margin-right: 0.255em;
   /* vertical-align: 0.255em; */
   content: "";
   border-top: 0.3em solid;
@@ -3488,14 +3496,14 @@ input[type="button"].btn-block {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 20px;
+  left: 0px;
   z-index: 1000;
   display: none;
-  float: left;
-  min-width: 10rem;
+  float: inline-end;
+  min-width: 15rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #55595c;
   text-align: left;
   list-style: none;
@@ -4576,7 +4584,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none;
+  text-decoration-color: none;
 }
 
 .navbar-nav {
@@ -4599,6 +4607,7 @@ input[type="button"].btn-block {
 
 .navbar-nav .dropdown-menu {
   position: static;
+  right: 10%;
   float: none;
 }
 
@@ -10523,7 +10532,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .nav-item {
-  margin-right: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .btn {
@@ -10592,12 +10602,12 @@ th {
   width: 20% !important ; /* Set the width of the sidebar */
   position: fixed !important; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1 !important; /* Stay on top */
-  top: 0 !important; /* Stay at the top */
+  top: 100 !important; /* Stay at the top */
   right: 0 !important;
   background-color: #111 !important; /* Black */
   overflow-x: visible; /* Disable horizontal scroll */
   overflow-y: scroll;
-  padding-top: 100px !important;
+  padding-top: 10px !important;
   padding-bottom: 100px !important;
   z-index: 999;
   background: black;
@@ -10648,6 +10658,7 @@ a, a:hover, a:focus {
   text-decoration: none;
   transition: all 0.3s;
 }
+
 
 /* #sidebar {
   width: 18%;
@@ -10789,4 +10800,7 @@ a[datatoggle="collapse"]{
   display: block;
   height: auto;
   width: 50%;
+}
+.elegant-color-dark{
+  color:#212121
 }
