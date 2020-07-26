@@ -20,14 +20,19 @@
   <body>
     <!-- Sidebar -->
     <div class= "wrapper">
-      <nav  class="sidebar">
+
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      </div>
+
+      <nav  class="sidebar" id="mainSidebar">
         <!-- <div class = "sidebar-header">
           <h3>Charts</h3>
         </div> -->
       
         <!-- cases animation link card -->
         <ul class= "list-unstyled sidenav a" >
-          <li class = "active">
+          <li >
             <div class="card mb-3 sidenav a:hover" >
               <h4 class="card-header sm-font">Cases</h4>
               <div class="card-body ">
@@ -40,7 +45,7 @@
           </li>
           
           <!-- deaths animation link card -->
-          <li class = "active">
+          <li >
             <div class="card mb-3 sidenav a:hover">
               <h4 class="card-header sm-font">Deaths</h4>
               <div class="card-body">
@@ -53,7 +58,7 @@
           </li>
           
           <!-- per capita cases link card -->
-          <li class= "active">
+          <li >
             <div class="card mb-3 sidenav a:hover" >
               <h4 class="card-header sm-font">Per Capita Cases</h4>
               <div class="card-body">
@@ -66,7 +71,7 @@
           </li>
           
           <!-- per capita deaths link -->
-          <li class = "active">
+          <li >
             <div class="card mb-3 sidenav a:hover" >
               <h4 class="card-header sm-font">Per Capita Deaths</h4>
               <div class="card-body">

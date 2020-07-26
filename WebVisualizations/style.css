@@ -10598,10 +10598,11 @@ th {
 
 /* The sidebar menu added to templates css by Ellen Rud from bootstrap*/ 
 .sidebar {
+  display:block;
   height: 90% !important; /* Full-height: remove this if you want "auto" height */
-  width: 20% !important ; /* Set the width of the sidebar */
+  width: 20% ; /* Set the width of the sidebar */
   position: fixed !important; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1 !important; /* Stay on top */
+  z-index: 2 !important; /* Stay on top */
   top: 100 !important; /* Stay at the top */
   right: 0 !important;
   background-color: #111 !important; /* Black */
@@ -10616,11 +10617,37 @@ th {
   transition: all .3s;
 }
 
+@media screen and (max-width:700px){
+.sidebar{width:0}
+}
+
+/* .sidebar .closebtn {
+  position: absolute;
+  z-index:1;
+  top: 100;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  z-index:1;
+  border: none;} */
+
+.openbtn:hover {
+  background-color: #444;
+  }
+
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #818181;
   display: block;
 }
@@ -10647,10 +10674,12 @@ th {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 20px;}
-  .sidenav a {font-size: 18px;}
+@media screen and (max-height: 400px) {
+  .sidenav {padding-top: 10px;text-align:left;float:left;}
+  .sidenav a {font-size: 5pt;}
+  .sm-font{font-size:5pt;}
 }
+
 
 .wrapper {
   display:block;
@@ -10758,13 +10787,14 @@ a[datatoggle="collapse"]{
 }
 
 @media (max-width: 768px){
-  /* reappearing sidebar on toggle button click */
+
   .sidebar{
-    margin-right:0;
+    width:0;
   }
   .sm-font{
     font-size:8pt!important;
   }
+
   .main, .main-index {
     background-color: beige;
     color: dark var(--gray-dark)
@@ -10785,7 +10815,21 @@ a[datatoggle="collapse"]{
     transform: translateX(50%)
   }
 }
+/* media query for sidebar on mobile  devices*/
+@media(maxwidth:400){
+  .sidebar, .sidenav, .card{
+    display:none;
+  }
+  .sm-font{
+    font-size:4pt!important;
+  }
+  
 
+  .main, .main-index {
+    background-color: beige;
+    color: dark var(--gray-dark)
+  }
+}
 .rt_caret{
   text-align: end ;
   vertical-align: bottom;
